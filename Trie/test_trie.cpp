@@ -21,7 +21,7 @@ int main()
     }
     cout << endl;
 
-    vector<string> input2 = {"abc", "abd", "acde", "abe", "aeb", "abba"};
+    vector<string> input2 = {"abc", "abd", "acde", "abe", "aeb", "abba", "abdc", "ab"};
     Trie trie2;
     for (string s : input2)
     {

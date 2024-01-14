@@ -44,7 +44,10 @@ class Trie
                 str.push_back(curr->data);
             }
             prepareStringStartingFrom(it->second, str, res);
-            str.pop_back();
+            if (!curr->isTerminal)
+            {
+                str.pop_back();
+            }
         }
     }
 
@@ -118,6 +121,10 @@ public:
         if (curr == NULL)
         {
             return res;
+        }
+        if (curr->isTerminal)
+        {
+            res.push_back(prefix);
         }
         for (auto it = curr->map.begin(); it != curr->map.end(); ++it)
         {
